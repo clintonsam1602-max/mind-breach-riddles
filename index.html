@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIND_BREACH // Logic & Riddle Terminal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="terminal-container">
+        <!-- Terminal Top Header Bar -->
+        <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="title">COGNITIVE_TERM@ROOT:~# ./mind_breach.sh</span>
+        </div>
+
+        <!-- Main Game Display -->
+        <div class="terminal-body">
+            <!-- Status / Score Bar -->
+            <div class="status-bar">
+                <span>NODE: <strong id="question-progress">1 / 8</strong></span>
+                <span>CRACKED: <strong id="score-display">0</strong></span>
+            </div>
+
+            <!-- Active Riddle / Brain Teaser Box -->
+            <div class="riddle-box">
+                <div class="riddle-label">&gt; INCOMING COGNITIVE CHALLENGE:</div>
+                <p id="riddle-text" class="riddle-text">Loading challenge...</p>
+                <div id="clue-box" class="clue-box hidden">
+                    <strong>[CLUE]:</strong> <span id="clue-text"></span>
+                </div>
+            </div>
+
+            <!-- Feedback Output Log -->
+            <div id="feedback-log" class="feedback-log">
+                <div class="log-entry system-msg">&gt; Analyze the prompt carefully. Think outside the box.</div>
+            </div>
+
+            <!-- Player Answer Input Form -->
+            <form id="answer-form" class="guess-form" autocomplete="off">
+                <span class="prompt-symbol">&gt;&gt;</span>
+                <input type="text" id="answer-input" placeholder="TYPE YOUR ANSWER..." required autofocus>
+                <button type="submit" id="submit-btn">CRACK</button>
+            </form>
+
+            <!-- Helper Action Buttons (Clue & Skip) -->
+            <div id="helper-controls" class="helper-controls">
+                <button type="button" id="clue-btn" class="secondary-btn">REQUEST CLUE</button>
+                <button type="button" id="skip-btn" class="secondary-btn">SKIP NODE</button>
+            </div>
+
+            <!-- End-of-Session Restart Control -->
+            <div id="action-container" class="action-container hidden">
+                <button id="restart-btn">REBOOT SYSTEM (PLAY AGAIN)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
